@@ -40,7 +40,6 @@ mango_event_t *mango_spawn(void *(*task)(task_args *), uint32_t range){
 
 uint32_t mango_lock(mango_event_t *e){
 	uint32_t value=0;
-	//dprint("Acquiring lock on event %p\n", e->vaddr);
 	do {
 		value = mango_read_synchronization(e);
 	} while (value==0);

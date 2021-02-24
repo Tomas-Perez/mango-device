@@ -10,11 +10,13 @@
 #include <semaphore.h>
 #endif
 
-#if __x86_64__
-typedef uint64_t mango_addr_t;
-#else
 typedef uint32_t mango_addr_t;
-#endif
+
+// #if __x86_64__
+// typedef uint64_t mango_addr_t;
+// #else
+// typedef uint32_t mango_addr_t;
+// #endif
 
 /*! \struct mango_event_t 
  * \brief Internal representation of event
